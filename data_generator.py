@@ -30,10 +30,10 @@ def worker(filename):
             #preconditions = participant_details[index]['preconitions']
             #preconditions_json = json.parse(preconditions)
 
-            writer.writerow([participant[index]['id']]+[participant[index]['state']]+[participant[index]['sex']]+\
+            writer.writerow([participant[index]['id']]+[participant[index]['latitude']]+[participant[index]['longitude']]+[1 if participant[index]['sex']=="M" else 0]+\
                             [split_date(participant[index]['DOB'])[0]]+[split_date(participant[index]['DOB'])[1]]\
                             +[1 if participant_details[index]['TOBACCO'] == "Yes" else 0] + [participant_details[index]['ANNUAL_INCOME']] + [participant_details[index]['OPTIONAL_INSURED']] \
-                            + [participant_details[index]['WEIGHT']]+[participant_details[index]['HEIGHT']]+[0 if participant_details[index]['MARITAL_STATUS'] == "S" else 1] \
+                            + [particEpant_details[index]['WEIGHT']]+[participant_details[index]['HEIGHT']]+[0 if participant_details[index]['MARITAL_STATUS'] == "S" else 1] \
                             +[quotes[index]['GOLD']]+[quotes[index]['SILVER']]+[quotes[index]['BRONZE']]+[quote_to_number(quotes[index]['PURCHASED'])]\
                             )
 if __name__ == '__main__':
