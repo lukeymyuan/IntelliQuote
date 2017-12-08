@@ -1,36 +1,181 @@
-{% extends "layout.html" %}
-{% block title %}Home{% endblock %}
-{% block head %}
- {{ super() }}
-    <style>
- body{background: url("http://myinsuranceshark.com/wp-content/uploads/2016/02/life-insurance-feature.jpg");
-     font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;}
- </style>
-{% endblock %}
-{% block content %}
-  <div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">Your choice</div>
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Eligibility Form</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
+      </script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+   </head>
+<body>
+<div class="container">
+    <div class="row">
+      <h2><strong>Great news--we have a match!</strong></h2>
+      <h2 class="text-center">Silver</h2>
+      <table class="table">
+        <thead>
+            <tr>
+              <th>Name: </th>
+              <th>Cost: </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Base Cost</td>
+              <td>$40</td>
+            </tr>
 
-  <div class="container">
-      <div class="bg-faded p-4 my-4">
-      <hr class="divider">
-      <h2 class="text-center text-lg text-uppercase my-0">
-          Plan 1
-      </h2>
-      <hr class="divider">
+            <tr>
+              <td>Accident, Disability, Dismemberment</td>
+              <td>$20000</td>
+            </tr>
+
+            <tr>
+              <td>Deductible</td>
+              <td>$7000</td>
+            </tr>
+              <td>Coverage</td>
+              <td>$100000</td>
+            </tr>
+            <tr style="background:#C0C0C0">
+              <td>Premium (Predicted)</td>
+              <td>$ {{silver}}</td>
+            </tr>
+          </td>
+        </tbody>
+      </table>
+
+
+      <button type="button" id="pop" class="btn btn-primary"> Select this plan!</button>
     </div>
-
-    <div class="bg-faded p-4 my-4">
-      <hr class="divider">
-      <h2 class="text-center text-lg text-uppercase my-0">
-          Plan 2
-      </h2>
-      <hr class="divider">
-    </div>
-
   </div>
+  <hr/>
+<div class="container">
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h4 class="text-center">Bronze</h4>
+        <table class="table">
+          <thead>
+              <tr>
+                <th>Name: </th>
+                <th>Cost: </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Base Cost</td>
+                <td>$20</td>
+              </tr>
 
-{% endblock %}
+              <tr>
+                <td>Accident, Disability, Dismemberment</td>
+                <td>$10000</td>
+              </tr>
+
+              <tr>
+                <td>Deductible</td>
+                <td>$8000</td>
+              </tr>
+                <td>Coverage</td>
+                <td>$100000</td>
+              </tr>
+              <tr style="background:#CD7F32">
+                <td>Premium (Predicted)</td>
+                <td>$ {{bronze}}</td>
+              </tr>
+
+            </td>
+          </tbody>
+        </table>
+        <button type="button" id="pop" class="btn btn-primary"> Select this plan!</button>
+      </div>
+
+      <div class="col-sm">
+          <h4 class="text-center">Gold</h4>
+          <table class="table">
+            <thead>
+                <tr>
+                  <th>Name: </th>
+                  <th>Cost: </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Base Cost</td>
+                  <td>$70</td>
+                </tr>
+
+                <tr>
+                  <td>Accident, Disability, Dismemberment</td>
+                  <td>$30000</td>
+                </tr>
+
+                <tr>
+                  <td>Deductible</td>
+                  <td>$5000</td>
+                </tr>
+                  <td>Coverage</td>
+                  <td>$100000</td>
+                </tr>
+                <tr style="background:#FFD700">
+                  <td>Premium (Predicted)</td>
+                  <td>$ {{gold}}</td>
+                </tr>
+              </td>
+            </tbody>
+          </table>
+          <button type="button" id="pop" class="btn btn-primary"> Select this plan!</button>
+      </div>
+      <div class="col-sm">
+          <h4 class="text-center">Platinum</h4>
+          <table class="table">
+            <thead>
+                <tr>
+                  <th>Name: </th>
+                  <th>Cost: </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Base Cost</td>
+                  <td>$110</td>
+                </tr>
+
+                <tr>
+                  <td>Accident, Disability, Dismemberment</td>
+                  <td>$50000</td>
+                </tr>
+
+                <tr>
+                  <td>Deductible</td>
+                  <td>$3000</td>
+                </tr>
+                  <td>Coverage</td>
+                  <td>$100000</td>
+                </tr>
+                <tr style="background:#e5e4e2">
+                  <td>Premium (Predicted)</td>
+                  <td>$ {{platinum}}</td>
+                </tr>
+              </td>
+            </tbody>
+          </table>
+          <button type="button" id="pop" class="btn btn-primary"> Select this plan!</button>
+      </div>
+    </div>
+    <div style="margin-top:5px"></div>
+</div>
+<script>
+  $('#pop').on('click',()=>{
+    alert('Thank you for shopping with IntelliQuote!\nHope you have a nice day!')
+  })
+</script>
+</body>
+</html>

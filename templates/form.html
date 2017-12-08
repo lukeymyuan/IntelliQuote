@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Eligibility Form</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
+      </script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+   </head>
+
+   <body>
+     <style>
+      .hidden{
+        display:none
+      }
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+          flex: 1 0 auto;
+        }
+
+     </style>
+     <nav class="light-blue lighten-1" role="navigation">
+       <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Intellisurance</a></div>
+     </nav>
+
+     <div id="form_1" class="container">
+       <h3 class="header">Personal details</h3>
+       <h5> We use this data to find a plan most tailored to your needs! </h5>
+         <div class="row">
+           <form id="form_form_1" class="col s12">
+             <div class="row">
+               <div class="input-field col s6">
+                 <input id="first_name" type="text" class="validate" required>
+                 <label for="first_name">First Name (Required)</label>
+               </div>
+               <div class="input-field col s6">
+                 <input id="last_name" type="text" class="validate" required="" aria-required="true">
+                 <label for="last_name">Last Name (Required)</label>
+               </div>
+             </div>
+             <div class="row">
+               <div class="input-field col s6">
+                 <input id="address" type="text" class="validate">
+                 <label for="address">Address Line</label>
+               </div>
+               <div class="input-field col s4">
+                 <input id="city" type="text" class="validate">
+                 <label for="city">City</label>
+               </div>
+               <div class="input-field col s2">
+                 <input id="state" type="text" class="validate">
+                 <label for="state">State</label>
+                </div>
+             </div>
+
+             <div class="row">
+               <div class="input_field col s6">
+                 <input id="gender" type="text" class="validate" required="" placeholder="M/F" aria-required="true">
+                 <label for="gender">Gender (Required)</label>
+               </div>
+               <div class="input_field col s6">
+                 <input id="date" type="text" class="datepicker" required="" aria-required="true">
+                 <label for="date">Date of Birth (Required)</label>
+               </div>
+             </div>
+
+             <button class="btn waves-effect waves-light" type="submit" id="form_submit">Next
+                <i class="material-icons right">send</i>
+              </button>
+            </form>
+          </div>
+       </div>
+       <script>
+
+       </script>
+       <div class="container hidden" id="form_2">
+         <h3 class="header">Health and Personal History</h3>
+         <h5>To get a better idea about your needs</h5>
+           <div class="row">
+             <form id="form_form_2" class="col s12">
+               <div class="row">
+                 <div class="input-field col s4">
+                      <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="Employed">Employed</option>
+                        <option value="Unemployed">Unemployed</option>
+                      </select>
+                      <label>Employment Status</label>
+                    </div>
+                    <div class="input-field col s4">
+                         <select id="married">
+                           <option value="" disabled selected>Choose your option</option>
+                           <option value="0">Married</option>
+                           <option value="1">Single</option>
+                         </select>
+                         <label>Marital Status</label>
+                       </div>
+                 <div class="input-field col s4">
+                   <select id="smoke">
+                     <option value="" disabled selected>Choose your option</option>
+                     <option value="1">Yes</option>
+                     <option value="0">No</option>
+                   </select>
+                   <label>Do you smoke tobacco?</label>
+                 </div>
+                 </div>
+               </div>
+
+
+               <div class="row">
+                 <div class="input-field col s2">
+                     <input id="people_covered" type="number" placeholder="0" class="validate">
+                     <label for="people_covered">People Covered</label>
+                 </div>
+                 <div class="input-field col s2">
+                   <input id="height" type="number" placeholder="70"  required class="validate">
+                   <label for="height">Height (inches)</label>
+                 </div>
+                 <div class="input-field col s2">
+                   <input id="weight" type="number" required placeholder="150" class="validate">
+                   <label for="state">Weight (lb)</label>
+                  </div>
+                  <div class="input-field col s3">
+                    <input id="optional_insured" type="number" placeholder="Preferred Flexible Insurance" required class="validate">
+                    <label for="optional_insured">Flex Insurance ($)</label>
+                   </div>
+                   <div class="input-field col s3">
+                     <input id="income" type="number" placeholder="60000" required class="validate">
+                     <label for="annual_income">Annual Income ($)</label>
+                    </div>
+               </div>
+
+               <div>
+                 <h5>Pre-existing Conditions</h5>
+                 <p>On a scale from zero to three, how much do you believe you're at risk for the following conditions? (Three is most)</p>
+
+                 <div class="row">
+                   <div class="col s6">
+                     Type 2 diabetes mellitus with hyperglycemia:
+                     <div class="input-field inline">
+                       <select id="E11.65">
+                         <option value="" disabled selected>Choose your option</option>
+                         <option value="0">0</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                   </div>
+                 </div>
+               </div>
+
+
+               <div class="row">
+                 <div class="col s6">
+                   Cough with hemorrhage:
+                   <div class="input-field inline">
+                     <select id="R04.2">
+                       <option value="" disabled selected>Choose your option</option>
+                       <option value="0">0</option>
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                     </select>
+                 </div>
+               </div>
+             </div>
+
+
+             <div class="row">
+               <div class="col s6">
+                 Other abnormalities of heart beat
+                 <div class="input-field inline">
+                   <select id="R00.8">
+                     <option value="" disabled selected>Choose your option</option>
+                     <option value="0">0</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                   </select>
+               </div>
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col s6">
+               Alzheimer's disease with early onset
+               <div class="input-field inline">
+                 <select id="G30.0">
+                   <option value="" disabled selected>Choose your option</option>
+                   <option value="0">0</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                 </select>
+             </div>
+           </div>
+         </div>
+
+         <div class="row">
+           <div class="col s6">
+             HIV disease resulting in other bacterial infections
+             <div class="input-field inline">
+               <select id="B20.1">
+                 <option value="" disabled selected>Choose your option</option>
+                 <option value="0">0</option>
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+               </select>
+           </div>
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="col s6">
+           Diarrhea
+           <div class="input-field inline">
+             <select id="R19.7">
+               <option value="" disabled selected>Choose your option</option>
+               <option value="0">0</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+             </select>
+         </div>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col s6">
+         Tachycardia
+         <div class="input-field inline">
+           <select id="R00.0">
+             <option value="" disabled selected>Choose your option</option>
+             <option value="0">0</option>
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+           </select>
+       </div>
+     </div>
+   </div>
+
+   <div class="row">
+     <div class="col s6">
+       Alcohol abuse with intoxication delirium
+       <div class="input-field inline">
+         <select id="F10.121">
+           <option value="" disabled selected>Choose your option</option>
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+         </select>
+     </div>
+   </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+      Displacement of permanent sutures
+      <div class="input-field inline">
+        <select id="T85.622">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+      Chronic kidney disease
+      <div class="input-field inline">
+        <select id="N18.9">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+      Broken internal left hip
+      <div class="input-field inline">
+        <select id="T84.011">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+      Unspecified fracture of other metacarpal bone
+      <div class="input-field inline">
+        <select id="S62.308">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+      Rheumatoid lung disease with rheumatoid arthritis
+      <div class="input-field inline">
+        <select id="M05.10">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+       Cocaine abuse with intoxication with delirium
+      <div class="input-field inline">
+        <select id="F14.121">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+       Obstructive sleep apnea
+      <div class="input-field inline">
+        <select id="G47.33">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+       Allergy to peanuts
+      <div class="input-field inline">
+        <select id="Z91.010">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col s6">
+       Chronic viral hepatitis B without delta-agent
+      <div class="input-field inline">
+        <select id="B18.1">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col s6">
+       Ataxic Cerebral Palsy
+      <div class="input-field inline">
+        <select id="G80.4">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+    </div>
+  </div>
+  </div>
+  </div>
+
+               <button class="btn waves-effect waves-light" type="submit" name="action">Next
+                  <i class="material-icons right">send</i>
+                </button>
+              </form>
+            </div>
+            <script>
+            var data_send = {}
+            $('.datepicker').pickadate({
+              selectMonths: true, // Creates a dropdown to control month
+              selectYears: 100, // Creates a dropdown of 15 years to control year,
+              today: 'Today',
+              clear: 'Clear',
+              close: 'Ok',
+              closeOnSelect: false // Close upon selecting a date,
+            });
+
+            $('#form_form_1').on('submit',(e)=>{
+              e.preventDefault()
+              data_send['first_name'] = $('#first_name').val()
+              data_send['last_name'] = $('#last_name').val()
+              data_send['address'] = $('#address').val()
+              data_send['city'] = $('#city').val()
+              data_send['state'] = $('#state').val()
+              data_send['gender'] = $('#gender').val()
+              data_send['date'] = $('#date').val()
+
+              $('#form_1').addClass('hidden')
+              $('#form_2').removeClass('hidden')
+
+              console.log(data_send)
+              /*$.ajax({
+                type:"POST",
+                url:'form_submit',
+                data:{
+                  "data":"Hi"
+                },
+                success:()=>{
+
+                }
+              })*/
+            })
+
+            $('#form_form_2').on('submit',(e)=>{
+              e.preventDefault()
+              data_send['married'] = $('#married').val()
+              data_send['smoke'] = $('#smoke').val()
+              data_send['height'] = $('#height').val()
+              data_send['weight'] = $('#weight').val()
+              data_send['income'] = $('#income').val()
+              data_send['optional_insured'] = $('#optional_insured').val()
+              console.log(data_send)
+              $.post("/form_submit", JSON.stringify(data_send),(response)=>{
+                a = JSON.parse(response)
+                console.log(a)
+                console.log(a.silver)
+                console.log(a['silver'])
+                console.log(response["bronze"])
+                window.location.href = '/plans/'+a.bronze+'/'+a.silver+'/'+a.gold+'/'+a.platinum;
+              })
+              /*$.ajax({
+                type:"POST",
+                url:"form_submit",
+                data:data_send,
+                success:()=>{
+                  alert("Success!")
+                }
+              })
+            })*/
+          })
+
+            $(document).ready(function() {
+               $('select').material_select();
+             })
+            </script>
+     </body>
+     <footer class="page-footer" style="margin-top:220px !important">
+
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright IntelliQuote
+            </div>
+          </div>
+        </footer>
+</html>

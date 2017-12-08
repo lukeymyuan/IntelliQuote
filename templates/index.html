@@ -1,49 +1,43 @@
-{% extends "layout.html" %}
-{% block title %}Home{% endblock %}
-{% block head %}
- {{ super() }}
-    <style>
- body{background: url("http://myinsuranceshark.com/wp-content/uploads/2016/02/life-insurance-feature.jpg");
-     font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;}
- </style>
-{% endblock %}
-{% block content %}
-  <div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">Your choice</div>
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Home</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
+      </script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+   </head>
 
-  <div class="container">
-      <div class="bg-faded p-4 my-4">
-		  <hr class="divider">
-		  <h2 class="text-center text-lg text-uppercase my-0">
-			  <strong>Enter your information</strong>
-          </h2>
-		  <hr class="divider">
-          <form class="form-inline" name="info">
-              <div class="form-group col-lg-12">
-                  <input type="text" class="text-heading form-control" id="name" placeholder="Name"> &nbsp &nbsp &nbsp
-                  <select class="selectpicker" data-placeholder="I am..." id="gender" data-live-search="true">
-                      <option value=""></option><option value="Male">Male</option><option value="Female">Female</option><option value="Other">Other &nbsp&nbsp&nbsp</option>
-                  </select> &nbsp &nbsp &nbsp
-                  <select class="selectpicker" data-placeholder="Choose a State..." id="state" data-live-search="true">
-                      <option value=""></option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">
-                      Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option>
-                      <option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Marianas Islands">Northern Marianas Islands</option>
-                      <option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option>
-                      <option value="Virginia">Virginia</option><option value="Virgin Islands">Virgin Islands</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option>
-                  </select> &nbsp &nbsp &nbsp
-                  <input type="text" class="text-heading form-control mb-2 mr-sm-2 mb-sm-0" id="age" placeholder="Age">
-              </div>
-              <br> <br> <br> <br>
-              <div class="form-group col-lg-12">
-                  <a href="{{url_for('plans')}}" class="text-heading btn btn-primary" id="compare" >Compare the plans</a>
-              </div>
-          </form>
+   <body>
+     <nav class="light-blue lighten-1" role="navigation">
+       <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">IntelliQuote</a></div>
+     </nav>
 
-      </div>
+     <div class="section no-pad-bot" id="index-banner" style="padding:0">
+       <div class="container shadow" >
+         <br><br>
+         <h1 class="header center orange-text">Healthcare, Modernized</h1>
+         <h3 class=" center blue-text light">Stay assured, we've got you :)</h3>
+         <div class="row center">
+           <h5 class="header col s12 light">Find out if you're eligible for one of our new plans</h5>
+         </div>
+         <div class="row center">
+           <a href="{{url_for('forms')}}" id="download-button" class="btn-large waves-effect waves-light orange">Let's go!</a>
+         </div>
 
-  </div>
+       </div>
+     </div>
 
-{% endblock %}
+
+     <!--  Scripts-->
+     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <script src="../../bin/materialize.js"></script>
+     <script src="js/init.js"></script>
+
+     </body>
+</html>
